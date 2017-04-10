@@ -22,7 +22,6 @@ public class Wektor {
         for(int i = 0; i < numbersStr.length; i++ )
         {
             wektor_int.add(Integer.parseInt(numbersStr[i]));
-            System.out.println(wektor_int);
         }
         return wektor_int;
     }

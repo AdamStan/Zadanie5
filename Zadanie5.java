@@ -18,20 +18,28 @@ public class Zadanie5 {
                 ArrayList<Integer> w2;
                 Scanner odczyt1,odczyt2;
 
-                do{
-                  System.out.println("Podaj pierwszy wektor ");
-                  odczyt1 = new Scanner(System.in);
-                }while(odczyt1.hasNextInt() == false); //to trzeba poprawić...
+                while(true){
+                    try{
+                        System.out.println("Podaj pierwszy wektor ");
+                        odczyt1 = new Scanner(System.in);
+                        w1 = Wektor.read(odczyt1);
+                        break;
+                    } catch(java.lang.NumberFormatException wyj_1){
+                        //wyj_1.printStackTrace();
+                    }
+                } //to trzeba poprawić...
 
-                w1 = Wektor.read(odczyt1);
+                while(true){
+                    try{
+                        System.out.println("Podaj drugi wektor ");
+                        odczyt2  = new Scanner(System.in);
+                        w2 = Wektor.read(odczyt2);
+                        break;
+                    } catch(java.lang.NumberFormatException wyj_2){
+                        //wyj_2.printStackTrace();
+                    }
+                } // to trzeba poprawić...
 
-                do{
-                  System.out.println("Podaj drugi wektor ");
-                  odczyt2  = new Scanner(System.in);
-                }while(odczyt2.hasNextInt() == false); // to trzeba poprawić...
-
-                w2 = Wektor.read(odczyt2);
-                
                 if(w1.size() == w2.size()){
                     w1 = Wektor.addition(w1,w2); //troche przesadzam z oszczednoscia, mozna wynik zapisywac na nowej arraylist
                     Wektor.save_nio(w1,"wynik_dodawania.txt");
@@ -40,8 +48,7 @@ public class Zadanie5 {
                     break;
                 }
                 else throw new WektoryRoznejDlugosciException();
-            }
-            catch (WektoryRoznejDlugosciException e) { 
+            } catch (WektoryRoznejDlugosciException e) { 
                 e.printStackTrace(System.out);
                 System.out.println("Wektory są różnej długości");
                 /*System.out.println("Długość wektora pierwszego: " + w1.size());
