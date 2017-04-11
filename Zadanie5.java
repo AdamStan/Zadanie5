@@ -49,8 +49,8 @@ public class Zadanie5 {
                 }
                 else throw new WektoryRoznejDlugosciException("Wektory są różnej długości", w1.size(), w2.size());
             } catch (WektoryRoznejDlugosciException e) { 
-                e.printStackTrace(System.out);
-                System.err.println("WektoryRoznejDlugosciException was caught " + e.getMessage());
+                // e.printStackTrace(System.out);
+                System.err.println("WektoryRoznejDlugosciException was caught: " + e.getMessage());
                 System.out.println("Długość wektora pierwszego: " + e.getFirst());
                 System.out.println("Długość wektora drugiego: " + e.getSecond());
             }
