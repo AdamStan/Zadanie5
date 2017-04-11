@@ -27,7 +27,7 @@ public class Zadanie5 {
                     } catch(java.lang.NumberFormatException wyj_1){
                         //wyj_1.printStackTrace();
                     }
-                } //to trzeba poprawić...
+                }
 
                 while(true){
                     try{
@@ -38,21 +38,21 @@ public class Zadanie5 {
                     } catch(java.lang.NumberFormatException wyj_2){
                         //wyj_2.printStackTrace();
                     }
-                } // to trzeba poprawić...
+                }
 
                 if(w1.size() == w2.size()){
                     w1 = Wektor.addition(w1,w2); //troche przesadzam z oszczednoscia, mozna wynik zapisywac na nowej arraylist
-                    Wektor.save_nio(w1,"wynik_dodawania.txt");
+                    Input.save_nio(w1,"wynik_dodawania.txt");
                     System.out.println("Wektory są tej samej długości");
                     System.out.println(w1);
                     break;
                 }
-                else throw new WektoryRoznejDlugosciException();
+                else throw new WektoryRoznejDlugosciException("Wektory są różnej długości", w1.size(), w2.size());
             } catch (WektoryRoznejDlugosciException e) { 
                 e.printStackTrace(System.out);
-                System.out.println("Wektory są różnej długości");
-                /*System.out.println("Długość wektora pierwszego: " + w1.size());
-                System.out.println("Długość wektora drugiego: " + w2.size());*/
+                System.err.println("WektoryRoznejDlugosciException was caught " + e.getMessage());
+                System.out.println("Długość wektora pierwszego: " + e.getFirst());
+                System.out.println("Długość wektora drugiego: " + e.getSecond());
             }
         }
     }
