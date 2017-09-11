@@ -24,12 +24,12 @@ public class Zadanie5 {
 	    }
 	}
     }
-    final iloscWektorow = 2;
+    final int iloscWektorow = 2;
     public static void main(String[] args) throws Exception{
         while(true){
             try{
-                ArrayList<Integer> w1;
-		
+                ArrayList<Integer> w1 = new ArrayList<Integer>();
+		ArrayList<Integer> w2 = new ArrayList<Integer>();
 		
                 podawanieWektorow(w1);
                 podawanieWektorow(w2);
