@@ -1,4 +1,4 @@
-package zadanie5;
+package Zadanie5;
 
  import java.io.FileOutputStream;
  import java.io.IOException;

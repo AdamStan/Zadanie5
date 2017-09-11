@@ -1,4 +1,4 @@
-package zadanie5;
+package Zadanie5;
 public class WektoryRoznejDlugosciException extends Exception{
     private int firstVectorSize;
     private int secondVectorSize;

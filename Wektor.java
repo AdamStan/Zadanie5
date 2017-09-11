@@ -1,4 +1,4 @@
-package zadanie5;
+package Zadanie5;
 /*Tu bedzie się działo, dużo różnych meteod do obsługi jebanych wektorów*/
  import java.util.Scanner;
  import java.util.ArrayList;
